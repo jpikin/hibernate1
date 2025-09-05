@@ -4,7 +4,8 @@ create table pets
     type varchar(20),
     name varchar(20),
     color varchar(20),
-    age int
+    age int,
+    person_id int references persons(id)
 );
 
 create table persons
@@ -12,7 +13,6 @@ create table persons
     id serial primary key ,
     name varchar(20),
     email varchar(20),
-    age int,
-    pet_id int references pets(id)
+    age int
 );
 
